@@ -3,10 +3,9 @@
   "author": "Zababurin Sergey",
   "version": "1.0.0",
   "description": "peer to peer connect",
-  "source": "./src/index.mjs",
+  "source": "./frontend/src/index.mjs",
   "module": "./dist/index.mjs",
   "license": "GPL-3.0-only",
-  "private": true,
   "config": {
     "path": "./frontend/src/index.html",
     "port": 6899
