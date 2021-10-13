@@ -1,0 +1,24 @@
+{
+  "name": "@zb/connect",
+  "author": "Zababurin Sergey",
+  "version": "1.0.0",
+  "description": "peer to peer connect",
+  "source": "./src/index.mjs",
+  "module": "./dist/index.mjs",
+  "license": "GPL-3.0-only",
+  "private": true,
+  "config": {
+    "path": "./frontend/src/index.html",
+    "port": 6899
+  },
+  "scripts": {
+    "dev": "parcel $npm_package_config_path --port $npm_package_config_port --dist-dir ./docs",
+    "build:html": "parcel build $npm_package_config_path --dist-dir ./docs",
+    "build": "parcel build",
+    "kill": "kill $(lsof -t -i:$npm_package_config_initiator)",
+    "clean:parcel": "find . -name \".parcel-cache\" -exec rm -rf '{}' +; "
+  },
+  "devDependencies": {
+    "parcel": "2.0.0-rc.0"
+  }
+}
