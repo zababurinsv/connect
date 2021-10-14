@@ -1,7 +1,7 @@
 {
   "name": "@newkind/connect",
   "author": "Zababurin Sergey",
-  "version": "1.0.1",
+  "version": "0.1.0",
   "main": "./dist/index.mjs",
   "source": "./frontend/src/index.mjs",
   "type": "module",
