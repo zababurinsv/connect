@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Connect</title>
+</head>
+<body>
+
+<script type="module">
+    import connect from './index.mjs'
+    import config from '../../config/config.mjs'
+    connect().then(async (webrtc) => {
+        await webrtc.peer(config.test.peer[0])
+        await webrtc.role(config.role.recipient)
+        console.log(await webrtc.params)
+        await webrtc.connect(config.signal)
+        await webrtc.await(config.signal)
+    })
+</script>
+</body>
+</html>

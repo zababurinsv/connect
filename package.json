@@ -1,23 +1,40 @@
 {
-  "name": "@zb/connect",
+  "name": "@newkind/connect",
   "author": "Zababurin Sergey",
-  "version": "1.0.0",
-  "description": "peer to peer connect",
+  "version": "1.0.1",
+  "main": "./dist/index.mjs",
   "source": "./frontend/src/index.mjs",
-  "module": "./dist/index.mjs",
+  "type": "module",
+  "description": "peer to peer connect",
   "license": "GPL-3.0-only",
   "config": {
-    "path": "./frontend/src/index.html",
+    "path_html": "./frontend/src/index.html",
+    "path_mjs": "./frontend/src/index.mjs",
     "port": 6899
   },
   "scripts": {
-    "dev": "parcel $npm_package_config_path --port $npm_package_config_port --dist-dir ./docs",
-    "build:html": "parcel build $npm_package_config_path --dist-dir ./docs",
-    "build": "parcel build",
+    "dev": "parcel $npm_package_config_path_html --port $npm_package_config_port --no-source-maps --dist-dir ./docs ",
+    "build:html": "parcel build $npm_package_config_path_html  --no-source-maps --dist-dir ./docs ",
+    "build": "parcel build $npm_package_config_path_mjs --no-source-maps --dist-dir ./dist ",
     "kill": "kill $(lsof -t -i:$npm_package_config_initiator)",
     "clean:parcel": "find . -name \".parcel-cache\" -exec rm -rf '{}' +; "
   },
   "devDependencies": {
     "parcel": "2.0.0-rc.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zababurinsv/connect.git"
+  },
+  "keywords": [
+    "peer",
+    "connection"
+  ],
+  "bugs": {
+    "url": "https://github.com/zababurinsv/connect/issues"
+  },
+  "homepage": "https://github.com/zababurinsv/connect#readme",
+  "dependencies": {
+    "redux": "^4.1.1"
   }
 }
