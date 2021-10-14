@@ -36,5 +36,8 @@
   "homepage": "https://github.com/zababurinsv/connect#readme",
   "dependencies": {
     "redux": "^4.1.1"
+  },
+  "publishConfig": {
+    "zababurinsv:registry": "https://npm.pkg.github.com"
   }
 }
